@@ -31,7 +31,6 @@ curl https://repo1.maven.org/maven2/kg/apc/cmdrunner/2.2/cmdrunner-2.2.jar >> li
 curl "https://raw.githubusercontent.com/Afsalmc/Azure-Blob-Container-Size-Calculator/main/mssql-jdbc-12.2.0.jre8.jar" >>  lib/ext/mssql-jdbc-12.jar
 java -cp lib/ext/jmeter-plugins-manager-1.7.jar org.jmeterplugins.repository.PluginManagerCMDInstaller
 
-cd ..
 PluginsManagerCMD.sh install jpgc-synthesis
 
 PluginsManagerCMD.sh install jpgc-cmd
