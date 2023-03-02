@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+
+  name: jmeter
+
+  labels:
+
+    app: jmeter
+
+spec:
+
+  replicas: 1
+
+  selector:
+
+    matchLabels:
+
+      app: jmeter
+
+  template:
+
+    metadata:
+
+      labels:
+
+        app: jmeter
+
+    spec:
+
+      containers:
+
+      - name: jmeter
+
+        image: justb4/jmeter:5.5
+        resources:
+          requests:
+            memory: "1140Mi"
+            cpu: "150m"
+          limits:
+            memory: "2228Mi"
+            cpu: "500m"
+        command: ["/bin/bash"]
+        args:
+            - "-c"
+            - |
+                while :; do sleep 2073600; done
+                
+                
+
+                
+        ports:
+
+        - containerPort: 80
